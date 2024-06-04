@@ -1,13 +1,14 @@
 .cellPrimal {
     font-family: "Century Gothic", sans-serif;
     color: #213547;
-    font-size: 15px;
+    font-size: 20px;
     text-align: center;
-    height: 50px;
-    width: 35px;
-    background-color: gainsboro;
+    height: 60px;
+    width: 45px;
+    background-color: rgb(220, 220, 220);
     border: none;
     border-radius: 0;
+    border: 1px solid rgb(210, 210, 210);
 }
 
 .cellPainted {

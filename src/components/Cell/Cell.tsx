@@ -11,10 +11,13 @@ export const Cell = ({value, onClick, isPressed}: CellProps) => {
 
     return (
         <button onClick={() => {
-            onClick(value);
-        }} className={classNames(styles.cellPrimal, {
+                onClick(value);
+            }}
+            className={classNames(styles.cellPrimal, {
             [styles.cellPainted]: isPressed,
-        })}>
+            })}
+            disabled={isPressed}
+        >
             {value}
         </button>
     );
