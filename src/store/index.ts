@@ -2,15 +2,17 @@ import {makeObservable, observable, action} from 'mobx';
 import {NumberCell} from '../models'
 
 export default class GameStore {
-    difficult: 21|56|70 = 21;
     index: number = 0;
-    numbers: number[] = Array(this.difficult).fill(1).map((_, i) => i + 1)
+    numbers: number[] = [];
     numberCells: NumberCell[] = [];
     constructor() {
         makeObservable({
             numberCells: observable.array,
             compareValues: action,
         })
+    }
+    createTestArray(difficultLevel: number) {
+        this.numbers = Array(difficultLevel).fill(1).map((_, i) => i + 1);
     }
     shuffleNumbersAndFillNumberCells() {
         const numbersCopy = this.numbers.map((n) => n);
@@ -22,7 +24,7 @@ export default class GameStore {
             return {value: n, isPressed: false}
         })
         this.numberCells = observable.array(this.numberCells)
-        console.log(this.numbers, this.numberCells)
+        console.log(this.numberCells)
     }
     compareValues(value: number) {
         if (value === this.numbers[this.index]) {

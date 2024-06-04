@@ -1,8 +1,6 @@
-/* eslint i18next/no-literal-string: "off" */
-import {Meta} from '@storybook/react';
-import {EndPage, EndPageProps} from './EndPage';
+import {EndPage} from './EndPage';
 
-const meta: Meta<EndPageProps> = {
+const meta = {
     component: EndPage,
     title: 'EndPage',
 };

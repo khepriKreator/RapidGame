@@ -1,8 +1,6 @@
-/* eslint i18next/no-literal-string: "off" */
-import {Meta} from '@storybook/react';
-import {StartPage, StartPageProps} from './StartPage';
+import {StartPage} from './StartPage';
 
-const meta: Meta<StartPageProps> = {
+const meta = {
     component: StartPage,
     title: 'StartPage',
 };

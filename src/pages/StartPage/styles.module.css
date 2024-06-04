@@ -1,0 +1,54 @@
+.startWindow {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 20px;
+    background-color: #b89974;
+    padding: 30px;
+    border-radius: 15px;
+}
+
+.header {
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 30px;
+    color: darkred;
+}
+
+.startButton {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    border-radius: 50%;
+    border: 2px solid #213547;
+    background-color: darkred;
+    width: 75px;
+    height: 75px;
+}
+
+.startButton:focus {
+    background-color: darkorange;
+}
+
+.levelsOfDifficult {
+    display: flex;
+    justify-content: space-evenly;
+    column-gap: 10px;
+}
+
+.levelOfDifficultButton {
+    color: #213547;
+    border-radius: 50%;
+    background-color: darkorange;
+    border: 1px solid #213547;
+    padding: 3px;
+}
+
+.levelOfDifficultButtonActive {
+    background-color: #66bf3c;
+}
+

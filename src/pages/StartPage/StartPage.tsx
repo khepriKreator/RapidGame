@@ -1,12 +1,32 @@
-import React from 'react';
-import styles from './styles.module.css';
+import {Link} from "react-router-dom";
+import styles from './styles.module.css'
+import {observer} from "mobx-react-lite";
+import classNames from "classnames";
+import {useState} from 'react'
 
-export type StartPageProps = {}
-
-export const StartPage = (props: StartPageProps) => {
+export const StartPage = observer(() => {
+    const levelsOfDifficult = [21, 56, 70];
+    const [currentLevelOfDifficult, setCurrentLevelOfDifficult] = useState(21);
     return (
-        <div>
-            StartPage
+        <div className={styles.startWindow}>
+            <h1 className={styles.header}>Rapid Game</h1>
+            <Link to={`/game/${currentLevelOfDifficult}`} className={styles.startButton}>
+                Start
+            </Link>
+            <div className={styles.levelsOfDifficult}>
+                {levelsOfDifficult.map((level, index) =>
+                    <button key={index}
+                            onClick={() => {
+                                setCurrentLevelOfDifficult(level)
+                            }}
+                            className={classNames(styles.levelOfDifficultButton, {
+                                [styles.levelOfDifficultButtonActive]: currentLevelOfDifficult === level,
+                            })}
+                    >
+                        {level}
+                    </button>
+                )}
+            </div>
         </div>
     );
-};
+});

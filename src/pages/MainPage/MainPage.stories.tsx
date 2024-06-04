@@ -1,4 +1,3 @@
-/* eslint i18next/no-literal-string: "off" */
 import {MainPage} from './MainPage';
 
 const meta = {

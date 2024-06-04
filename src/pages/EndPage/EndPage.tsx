@@ -1,8 +1,10 @@
+import {useParams} from "react-router-dom";
 
 export const EndPage = () => {
+    const {end} = useParams();
     return (
         <div>
-            End
+            {end === 'win' ? 'win' : 'lose'}
         </div>
     );
 };

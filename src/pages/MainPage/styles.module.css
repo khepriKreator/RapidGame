@@ -1,4 +1,25 @@
-.cells {
+.body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 2px solid #213547;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: brown;
+    padding: 15px;
+}
+
+.score, .timer {
+    color: white;
+
+}
+
+
+.gameField {
     width: fit-content;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;

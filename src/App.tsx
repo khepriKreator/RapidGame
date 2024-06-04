@@ -8,11 +8,11 @@ function App() {
           element: <StartPage/>
       },
       {
-          path: '/game',
+          path: '/game/:levelOfDifficult',
           element: <MainPage/>
       },
       {
-          path: '/end',
+          path: '/:end',
           element: <EndPage/>
       }
   ])
