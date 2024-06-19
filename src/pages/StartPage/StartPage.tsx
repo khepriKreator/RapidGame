@@ -2,11 +2,15 @@ import {Link} from "react-router-dom";
 import styles from './styles.module.css'
 import {observer} from "mobx-react-lite";
 import classNames from "classnames";
-import {useState} from 'react'
+import {useEffect, useState} from 'react'
+import {localStorageService} from "../../services/localStorageService.ts";
 
 export const StartPage = observer(() => {
     const levelsOfDifficult = [21, 56, 70];
     const [currentLevelOfDifficult, setCurrentLevelOfDifficult] = useState(21);
+    useEffect(() => {
+        localStorageService.removeResult();
+    }, [])
     return (
         <div className={styles.startWindow}>
             <h1 className={styles.header}>Rapid Game</h1>

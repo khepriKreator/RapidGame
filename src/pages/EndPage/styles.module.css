@@ -1,0 +1,28 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    align-items: center;
+    padding: 30px;
+    border: 2px solid #213547;
+}
+
+.header {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.scores {
+    margin-bottom: 5px;
+}
+
+.scores h3 {
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.restartButton {
+    border: 1px solid #213547;
+    padding: 5px 10px;
+}

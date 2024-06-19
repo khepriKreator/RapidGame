@@ -4,9 +4,8 @@
     justify-content: center;
     align-items: center;
     row-gap: 20px;
-    background-color: #b89974;
     padding: 30px;
-    border-radius: 15px;
+    border: 2px solid #213547;
 }
 
 .header {

@@ -1,5 +1,6 @@
 import {makeObservable, observable, action} from 'mobx';
-import {NumberCell} from '../models'
+import {NumberCell, Result} from '../models'
+import {localStorageService} from "../services/localStorageService.ts";
 
 export default class GameStore {
     index: number = 0;
@@ -42,5 +43,9 @@ export default class GameStore {
     }
     reset() {
         this.index = 0
+    }
+
+    setResultToLocalStorage(result: Result) {
+        localStorageService.setResult(result);
     }
 }
